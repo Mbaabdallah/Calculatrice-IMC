@@ -71,16 +71,14 @@
 
                     <TextView
                         android:id="@+id/textView"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:text="Poids" />
 
                     <EditText
                         android:id="@+id/txtpoids"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:ems="10"
                         android:inputType="number" />
                 </LinearLayout>
@@ -95,16 +93,14 @@
 
                     <TextView
                         android:id="@+id/textView4"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:text="Taille" />
 
                     <EditText
                         android:id="@+id/txtTaille"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:ems="10"
                         android:inputType="number" />
                 </LinearLayout>
@@ -119,16 +115,14 @@
 
                     <TextView
                         android:id="@+id/textView5"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:text="Age" />
 
                     <EditText
                         android:id="@+id/txtAge"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:ems="10"
                         android:inputType="number" />
                 </LinearLayout>
@@ -167,7 +161,7 @@
                 app:srcCompat="@drawable/normale" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/result"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
