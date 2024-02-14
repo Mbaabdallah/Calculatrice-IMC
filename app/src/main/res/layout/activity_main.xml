@@ -34,41 +34,100 @@
                 android:orientation="vertical">
 
 
-                <RadioGroup
-                    android:id="@+id/grpRadioSexe"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center|center_horizontal|center_vertical"
-                    android:gravity="center|center_horizontal|center_vertical">
+                    android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/rdHomme"
-                        style="@android:style/Widget.CompoundButton.RadioButton"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="-20dp"
                         android:layout_weight="1"
-                        android:button="?android:attr/listChoiceIndicatorMultiple"
-                        android:buttonTint="#FAF7F7"
-                        android:checked="true"
-                        android:tag="0"
-                        android:text="@string/homme"
-                        android:textAlignment="viewStart"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/rdFemme"
-                        style="@android:style/Widget.CompoundButton.RadioButton"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|center_horizontal|center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingTop="35dp"
+                            android:paddingBottom="35dp">
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/manwhite" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|center_horizontal|center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingTop="35dp"
+                            android:paddingBottom="35dp">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/womanwhite" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="-15dp"
                         android:layout_weight="1"
-                        android:button="?android:attr/listChoiceIndicatorMultiple"
-                        android:tag="1"
-                        android:text="@string/femme"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="#FDFCFC"
-                        android:textSize="20sp" />
-                </RadioGroup>
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/grpRadioSexe"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|center_horizontal|center_vertical"
+                            android:gravity="center|center_horizontal|center_vertical"
+                            android:paddingLeft="30dp">
+
+                            <RadioButton
+                                android:id="@+id/rdHomme"
+                                style="@android:style/Widget.CompoundButton.RadioButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:button="?android:attr/listChoiceIndicatorMultiple"
+                                android:buttonTint="#FAF7F7"
+                                android:checked="true"
+                                android:tag="0"
+                                android:textAlignment="viewStart"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="34sp" />
+
+                            <RadioButton
+                                android:id="@+id/rdFemme"
+                                style="@android:style/Widget.CompoundButton.RadioButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:button="?android:attr/listChoiceIndicatorMultiple"
+                                android:tag="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="#FDFCFC"
+                                android:textSize="20sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
