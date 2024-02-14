@@ -41,7 +41,7 @@
                         android:layout_weight="1"
                         android:checked="true"
                         android:tag="0"
-                        android:text="Homme"
+                        android:text="@string/homme"
                         android:textSize="20sp" />
 
                     <RadioButton
@@ -50,7 +50,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:tag="1"
-                        android:text="Femme"
+                        android:text="@string/femme"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -75,7 +75,7 @@
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Poids" />
+                        android:text="@string/poids" />
 
                     <EditText
                         android:id="@+id/txtpoids"
@@ -97,7 +97,7 @@
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Taille" />
+                        android:text="@string/taille" />
 
                     <EditText
                         android:id="@+id/txtTaille"
@@ -123,7 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Calculer" />
+                android:text="@string/calculer" />
         </LinearLayout>
 
         <LinearLayout
@@ -145,7 +145,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="votre poids est normale" />
+                android:text="@string/votre_poids_est_normale" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

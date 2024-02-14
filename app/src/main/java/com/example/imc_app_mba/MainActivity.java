@@ -3,12 +3,15 @@ package com.example.imc_app_mba;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.utils.widget.ImageFilterView;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText txtpoids;
@@ -35,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         btnCalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+
+                // Vérifiez si les champs de taille et poids sont remplis
+                if (isChampsRemplis()) {
                 if (txtpoids.getText().length() > 0 && txtTaille.getText().length() > 0) {
                     float Taille = Float.parseFloat(txtTaille.getText().toString());
                     float Poids = Float.parseFloat(txtpoids.getText().toString());
@@ -80,6 +88,13 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }
+                } else {
+                    Toast.makeText(MainActivity.this, "Remplissez les champs s'il vous plait", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+             boolean isChampsRemplis() {
+                return txtTaille.getText().length() > 0 && txtpoids.getText().length() > 0;
             }
         });
     }
