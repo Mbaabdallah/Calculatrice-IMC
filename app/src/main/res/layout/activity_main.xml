@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#3C3C3C"
         android:orientation="vertical">
 
         <LinearLayout
@@ -23,9 +24,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="25dp"
                 android:layout_weight="1"
+                android:background="@drawable/background"
                 android:gravity="center|center_horizontal|center_vertical"
                 android:orientation="vertical">
+
 
                 <RadioGroup
                     android:id="@+id/grpRadioSexe"
@@ -36,21 +43,30 @@
 
                     <RadioButton
                         android:id="@+id/rdHomme"
+                        style="@android:style/Widget.CompoundButton.RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:button="?android:attr/listChoiceIndicatorMultiple"
+                        android:buttonTint="#FAF7F7"
                         android:checked="true"
                         android:tag="0"
                         android:text="@string/homme"
+                        android:textAlignment="viewStart"
+                        android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
                     <RadioButton
                         android:id="@+id/rdFemme"
+                        style="@android:style/Widget.CompoundButton.RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:button="?android:attr/listChoiceIndicatorMultiple"
                         android:tag="1"
                         android:text="@string/femme"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFCFC"
                         android:textSize="20sp" />
                 </RadioGroup>
             </LinearLayout>
@@ -67,7 +83,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
                     android:layout_weight="1"
+                    android:background="@drawable/background"
                     android:gravity="center|center_horizontal|center_vertical"
                     android:orientation="horizontal">
 
@@ -75,21 +96,30 @@
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/poids" />
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/poids"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/txtpoids"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textColor="#FBF9F9" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="25dp"
                     android:layout_weight="1"
+                    android:background="@drawable/background"
                     android:gravity="center|center_horizontal|center_vertical"
                     android:orientation="horizontal">
 
@@ -97,14 +127,18 @@
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/taille" />
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/taille"
+                        android:textColor="#FAF8F8"
+                        android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/txtTaille"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textColor="#F8F6F6" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -122,21 +156,32 @@
                 android:id="@+id/btnCalc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:text="@string/calculer" />
+                android:background="@drawable/buttonbg"
+                android:text="@string/calculer"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="25dp"
             android:layout_weight="1"
+            android:background="@drawable/background"
             android:gravity="center|center_horizontal|center_vertical"
             android:orientation="horizontal">
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
                 android:id="@+id/lblresulta"
-                android:layout_width="0dp"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/normale" />
 
@@ -145,7 +190,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/votre_poids_est_normale" />
+                android:text="@string/votre_poids_est_normale"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

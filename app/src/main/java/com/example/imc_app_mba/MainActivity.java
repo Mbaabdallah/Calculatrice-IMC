@@ -65,9 +65,12 @@ public class MainActivity extends AppCompatActivity {
                         } else if (imc < 30) {
                             result.setText("Votre IMC est:" + imc + " \n Vous êtes Grosse");
                             lblresulta.setImageResource(R.drawable.surpoidsf);
-                        } else {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes Obèse");
+                        }else if (imc < 40) {
+                            result.setText("Votre IMC est:" + imc + " \n Vous êtes Gros");
                             lblresulta.setImageResource(R.drawable.obesef);
+                        } else {
+                            result.setText("Votre IMC est:" + imc + " \n Vous êtes trés Obèse");
+                            lblresulta.setImageResource(R.drawable.severef);
                         }
                     } else { // Homme
                         if (imc < 16) {
@@ -82,14 +85,17 @@ public class MainActivity extends AppCompatActivity {
                         } else if (imc < 30) {
                             result.setText("Votre IMC est:" + imc + " \n Vous êtes Gros");
                             lblresulta.setImageResource(R.drawable.surpoids);
-                        } else {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes Obèse");
+                        }else if (imc < 40) {
+                            result.setText("Votre IMC est:" + imc + " \n Vous êtes Gros");
                             lblresulta.setImageResource(R.drawable.obese);
+                        } else {
+                            result.setText("Votre IMC est:" + imc + " \n Vous êtes trés Obèse");
+                            lblresulta.setImageResource(R.drawable.severe);
                         }
                     }
                 }
                 } else {
-                    Toast.makeText(MainActivity.this, "Remplissez les champs s'il vous plait", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Remplissez les champs s'il vous plaît", Toast.LENGTH_SHORT).show();
                 }
             }
 
