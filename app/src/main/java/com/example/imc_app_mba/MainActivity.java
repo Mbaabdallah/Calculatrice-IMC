@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         txtpoids = findViewById(R.id.txtpoids);
         txtTaille = findViewById(R.id.txtTaille);
         btnCalc = findViewById(R.id.btnCalc);
@@ -54,42 +55,42 @@ public class MainActivity extends AppCompatActivity {
 
                     if (selectedSexe == 0) { // Femme
                         if (imc < 16) {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes trop maigre");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes trop maigre");
                             lblresulta.setImageResource(R.drawable.maigreurf);
                         } else if (imc < 18.5) {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes maigre");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes maigre");
                             lblresulta.setImageResource(R.drawable.maigreurf);
                         } else if (imc < 25) {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes normale");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes normale");
                             lblresulta.setImageResource(R.drawable.normalef);
                         } else if (imc < 30) {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes Grosse");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes Grosse");
                             lblresulta.setImageResource(R.drawable.surpoidsf);
                         }else if (imc < 40) {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes Gros");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes Gros");
                             lblresulta.setImageResource(R.drawable.obesef);
                         } else {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes trés Obèse");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes trés Obèse");
                             lblresulta.setImageResource(R.drawable.severef);
                         }
                     } else { // Homme
                         if (imc < 16) {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes trop maigre");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes trop maigre");
                             lblresulta.setImageResource(R.drawable.maigreur);
                         } else if (imc < 18.5) {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes maigre");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes maigre");
                             lblresulta.setImageResource(R.drawable.maigreur);
                         } else if (imc < 25) {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes normale");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes normale");
                             lblresulta.setImageResource(R.drawable.normale);
                         } else if (imc < 30) {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes Gros");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes Gros");
                             lblresulta.setImageResource(R.drawable.surpoids);
                         }else if (imc < 40) {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes Gros");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes Gros");
                             lblresulta.setImageResource(R.drawable.obese);
                         } else {
-                            result.setText("Votre IMC est:" + imc + " \n Vous êtes trés Obèse");
+                            result.setText("Votre IMC est: \n" + imc + " \n \n Vous êtes trés Obèse");
                             lblresulta.setImageResource(R.drawable.severe);
                         }
                     }
@@ -106,7 +107,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     Float CalculIMC(float taille, float poids) {
-        taille=(taille/100);
-        return (float)(poids/(taille*taille));
+        taille = taille / 100;
+        return poids / (taille * taille);
+        //float imc = poids / (taille * taille);
+
+        //deux chiffres après la virgule
+       // String imcFormate = String.format("%.2f", imc);
+
+        // Convertir la chaîne formattée en float
+        //return Float.parseFloat(imcFormate);
     }
 }

@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">IMC_App_MBA</string>
+    <string name="app_name">BodyWell</string>
     <string name="homme">Homme</string>
     <string name="femme">Femme</string>
-    <string name="poids">Poids</string>
-    <string name="taille">Taille</string>
+    <string name="poids">Poids:</string>
+    <string name="taille">Taille:</string>
     <string name="calculer">Calculer</string>
     <string name="votre_poids_est_normale">votre poids est normale</string>
+    <string name="calculatrice_imc">BodyWell</string>
 </resources>
