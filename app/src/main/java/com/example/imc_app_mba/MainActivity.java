@@ -5,10 +5,12 @@ import androidx.constraintlayout.utils.widget.ImageFilterView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     TextView result;
     ImageFilterView lblresulta;
     RadioButton rdFemme;
+    ImageButton infoButton;
 
 
     @Override
@@ -34,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
         result = findViewById(R.id.result);
         lblresulta = findViewById(R.id.lblresulta);
         rdFemme = findViewById(R.id.rdFemme);
+        infoButton = findViewById(R.id.infoBull);
+
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showToast("Developed by Montassar bellah ABDALLAH");
+            }
+        });
 
 
         btnCalc.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +115,11 @@ public class MainActivity extends AppCompatActivity {
                 return txtTaille.getText().length() > 0 && txtpoids.getText().length() > 0;
             }
         });
+    }
+
+    private void showToast(String msg) {
+        Toast.makeText(getApplicationContext(),msg, Toast.LENGTH_LONG).show();
+
     }
 
     Float CalculIMC(float taille, float poids) {
