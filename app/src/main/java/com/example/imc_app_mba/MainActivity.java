@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 showToast("Developed by Montassar bellah ABDALLAH");
             }
         });

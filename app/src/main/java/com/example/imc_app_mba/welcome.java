@@ -3,11 +3,13 @@ package com.example.imc_app_mba;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -32,19 +34,32 @@ public class welcome extends AppCompatActivity {
         about = findViewById(R.id.about);
         infoo = findViewById(R.id.infoo);
 
-        infoo.setText("nombre de tentatives restantes: 5");
 
 
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://www.linkedin.com/in/montassar-bellah-abdallah-444931168/";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
 
-
+            }
+        });
         cnxx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate(username.getText().toString(), userpwd.getText().toString());
+                if (isChampsRemplis()) {
+                    validate(username.getText().toString(), userpwd.getText().toString());
+                } else {
+                    Toast.makeText(welcome.this, "Remplissez les champs s'il vous plaît", Toast.LENGTH_SHORT).show();
+                    infoo.setText("nombre de tentatives restantes: 5");
+                }
 
 
-
-
+            }
+            boolean isChampsRemplis() {
+                return username.getText().length() > 0 && userpwd.getText().length() > 0;
             }
         });
     }
@@ -56,10 +71,11 @@ public class welcome extends AppCompatActivity {
         }else {
             counter--;
 
-            infoo.setText("nombre de tentatives restantes"+ String.valueOf(counter));
+            infoo.setText("nombre de tentatives restantes: "+ String.valueOf(counter));
             if (counter==0){
                 cnxx.setEnabled(false);
             }
         }
     }
+
 }
